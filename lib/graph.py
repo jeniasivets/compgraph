@@ -48,6 +48,17 @@ class Graph:
         for line in open(filename):
             yield parser(line)
 
+    @staticmethod
+    def graph_from_file(filename: str, parser: tp.Callable[[str], ops.TRow]) -> 'Graph':
+        """Construct new graph extended with operation for reading rows from file
+        :param filename: filename to read from
+        :param parser: parser from string to Row
+        """
+        graph = Graph()
+        graph.parser = parser
+        graph.kwarg_name = filename
+        return graph
+
     def map(self, mapper: ops.Mapper) -> 'Graph':
         """Construct new graph extended with map operation with particular mapper
         :param mapper: mapper to use
