@@ -24,7 +24,7 @@ Typically, operations are invoked sequentially, but there are also operations (e
 Construct a table that lists the average speed of vehicles based on the hour of the day and the day of the week, utilizing traffic movement data. The streets are represented as a graph, while the movement data is provided in table format, with each row containing information such as:
 
 ```plaintext
-{'edge_id': '624', 'enter_time': '20170912T123410.1794', 'leave_time': '20170912T123412.68'}
+{'edge_id': ..., 'enter_time': ..., 'leave_time': ...}
 ```
 - **edge_id**: The identifier for the roadway segment.
 - **enter_time** and **leave_time**: The UTC time a vehicle enters and exits the segment.
@@ -32,7 +32,7 @@ Construct a table that lists the average speed of vehicles based on the hour of 
 Additionally, a supplementary table is provided in the following format:
 
 ```plaintext
-{'edge_id': '313', 'length': 121, 'start': [37.31245, 51.256734], 'end': [37.31245, 51.256734]}
+{'edge_id': ..., 'length': ..., 'start': ..., 'end': ...}
 ```
 - **length**: The length of the segment in meters.
 - **start** and **end**: The coordinates of the start and end points of the segment.
